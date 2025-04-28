@@ -12,8 +12,8 @@ studio4_problem_1a = function(n_together, n_Barto_alone, ntrials) {
   # Probabilities for +1 and -1 outcomes
   probabilities = c(18/38, 20/38)
   
-  axel_totals = numeric(ntrials)
-  barto_totals = numeric(ntrials)
+  axel_totals = c()
+  barto_totals = c()
   
   # Simulate each trial
   for (i in 1:ntrials) {
