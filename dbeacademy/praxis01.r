@@ -62,11 +62,12 @@ plot_kpi_data = function() {
   print(plot)
 }
 
-v_1 = c(2, 9, 8)
-v_2 = c(2, 9, 8, NaN)
-print(sum(v_1))
-print(sum(v_2))
+read_and_edit_csv = function() {
+  customer_data = read.csv2(url('https://gitlab.com/DBEAcademy/data-science-demo/-/raw/main/beispiel_daten.csv'), sep = ',')
+  
+  customer_data$Land[customer_data$Land == 'USA'] = 'Vereinigte Staaten'
+  
+  write.csv2(customer_data, 'customer_data.csv')
+}
 
-
-
-
+read_and_edit_csv()
